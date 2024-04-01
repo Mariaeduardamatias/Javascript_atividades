@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de números</title>
+</head>
+<body>
+    <script>
+        // Função para trocar os valores dos números
+        function trocarValores(num1, num2) {
+            let temp = num1;
+            num1 = num2;
+            num2 = temp;
+            return [num1, num2];
+        }
+
+        // Função principal
+        function main() {
+            // Solicita ao usuário para inserir os números
+            let num1 = parseInt(prompt("Digite o primeiro número inteiro: "));
+            let num2 = parseInt(prompt("Digite o segundo número inteiro: "));
+
+            // Chama a função para trocar os valores
+            [num1, num2] = trocarValores(num1, num2);
+
+            // Exibe os números trocados na tela
+            document.write("Os números trocados são: " + num1 + " e " + num2);
+        }
+
+        // Chama a função principal
+        main();
+    </script>
+</body>
+</html>
+

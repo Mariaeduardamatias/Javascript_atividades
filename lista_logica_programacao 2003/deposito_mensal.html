@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depósito Mensal</title>
+</head>
+<body>
+    <script>
+        // Função para calcular o montante após 12 meses
+        function calcularMontante(depositoMensal, JurosMensal) {
+            const meses = 12;
+            let montante = 0;
+
+            for (let i = 0; i < meses; i++) {
+                montante += depositoMensal;
+                montante *= (1 + JurosMensal);
+            }
+
+            return montante;
+        }
+
+        // Função principal
+        function main() {
+            // Solicita ao usuário para inserir o valor do depósito mensal e a taxa de juros mensal
+            let depositoMensal = parseFloat(prompt("Digite o valor do depósito mensal em poupança: "));
+            let JurosMensal = parseFloat(prompt("Digite a taxa de juros mensal (em decimal): "));
+
+            // Chama a função para calcular o montante após 12 meses
+            let montanteFinal = calcularMontante(depositoMensal, JurosMensal);
+
+            // Exibe o montante após 12 meses na tela
+            document.write("O montante após 12 meses é: " + montanteFinal.toFixed(2));
+        }
+
+        // Chama a função principal
+        main();
+
+    </script>
+</body>
+</html>

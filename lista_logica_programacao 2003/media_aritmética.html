@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular a Média aritmética</title>
+</head>
+<body>
+    <script>
+        // Função para calcular a média aritmética entre três números
+        function calcularMedia(num1, num2, num3) {
+            return (num1 + num2 + num3) / 3;
+        }
+
+        // Função principal
+        function main() {
+            
+            // Solicita ao usuário para inserir os três números reais
+            let numero1 = parseFloat(prompt("Digite o primeiro número real: "));
+            let numero2 = parseFloat(prompt("Digite o segundo número real: "));
+            let numero3 = parseFloat(prompt("Digite o terceiro número real: "));
+
+            // Chama a função para calcular a média aritmética
+            let media = calcularMedia(numero1, numero2, numero3);
+
+            // Exibe a média na tela
+            document.write("A média aritmética dos números inseridos é: " + media.toFixed(2));
+        }
+
+        // Chama a função principal
+        main();
+
+    </script>
+</body>
+</html>

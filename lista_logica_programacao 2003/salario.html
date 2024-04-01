@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário base de um funcionário</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // Solicita ao usuário o salário base do funcionário
+        let salarioBase = parseFloat(prompt("Digite o salário base do funcionário:"));
+        
+        // Calcula a comissão (5% do salário base)
+        let comissao = salarioBase * 0.05;
+        
+        // Calcula o salário líquido (salário base + comissão)
+        let salarioLiquido = salarioBase + comissao;
+        
+        // Exibe o salário líquido na tela
+        document.write("<h2>O salário líquido do funcionário é: R$" + salarioLiquido.toFixed(2) + "</h2>");
+        
+        </script>
+</body>
+</html>
