@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    <script>
+
+        // Variável para armazenar a soma dos números
+        var soma = 0;
+
+        // Solicitar ao usuário para inserir 10 números e calcular a soma
+        for (var i = 0; i < 10; i++) {
+            var numero = parseFloat(prompt("Digite o " + (i + 1) + "º número:"));
+            soma += numero;
+        }
+
+        // Exibir a soma total dos 10 números lidos
+        document.write("<p>A soma total dos 10 números é: " + soma + "</p>");
+        
+    </script>
+</body>
+</html>

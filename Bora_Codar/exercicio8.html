@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+<body>
+    <script>
+
+        // Array para armazenar os números informados pelo usuário
+        var numeros = [];
+
+        // Solicitar ao usuário para inserir 4 números e verificar se estão no intervalo de 0 a 10
+        for (var i = 0; i < 4; i++) {
+            var numero = parseFloat(prompt("Digite o " + (i + 1) + "º número:"));
+            if (numero > 0 && numero < 10) {
+                numeros.push(numero); // Adicionar o número ao array se estiver no intervalo
+            } else {
+                alert("Por favor, digite um número entre 0 e 10.");
+                // Se o número estiver fora do intervalo, diminuir o índice para repetir a entrada
+                i--;
+            }
+        }
+
+        // Verificar se foram informados pelo menos 4 números no intervalo
+        if (numeros.length === 4) {
+            // Calcular a média dos números
+            var soma = 0;
+            for (var i = 0; i < numeros.length; i++) {
+                soma += numeros[i];
+            }
+            var media = soma / numeros.length;
+
+            // Exibir mensagem dependendo da média
+            if (media > 5) {
+                alert("Você passou no teste.");
+            } else {
+                alert("Tente novamente.");
+            }
+        } else {
+            alert("Você não informou pelo menos 4 números válidos.");
+        }
+        
+    </script>
+</body>
+</html>

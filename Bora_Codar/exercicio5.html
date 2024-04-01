@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<body>
+    <script>
+
+        // Array para armazenar os valores informados pelo usuário
+        var valores = [];
+
+        // Solicitar ao usuário para inserir 10 valores e armazená-los
+        for (var i = 0; i < 10; i++) {
+            var valor = parseFloat(prompt("Digite o " + (i + 1) + "º valor:"));
+            valores.push(valor);
+        }
+
+        // Calcular a soma dos valores
+        var soma = 0;
+        for (var i = 0; i < valores.length; i++) {
+            soma += valores[i];
+        }
+
+        // Calcular a média aritmética
+        var media = soma / valores.length;
+
+        // Exibir os valores informados
+        document.write("<p>Valores informados:</p>");
+        document.write("<ul>");
+        for (var i = 0; i < valores.length; i++) {
+            document.write("<li>" + valores[i] + "</li>");
+        }
+        document.write("</ul>");
+
+        // Exibir a média aritmética
+        document.write("<p>A média aritmética dos valores é: " + media.toFixed(2) + "</p>");
+        
+    </script>
+</body>
+</html>
